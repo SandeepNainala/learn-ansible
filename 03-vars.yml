@@ -12,7 +12,7 @@
 # msg: {{ URL }} <- This requires quoting
 # msg: URL - {{ URL }} <- This does not require quoting
 
-- name: Demo on vars file level variable
+- name: Load vars from a files
   hosts: all
   vars_files:
     - exvars.yml
