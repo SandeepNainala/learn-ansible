@@ -34,5 +34,9 @@
 
 # Only that task have that variable, other tasks cannot access it.
 
-
+- name: variable from role
+  hosts: all
+  vars:
+  roles:
+    - sample
 
