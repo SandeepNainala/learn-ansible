@@ -12,7 +12,16 @@
 # msg: {{ URL }} <- This requires quoting
 # msg: URL - {{ URL }} <- This does not require quoting
 
-- name: Demon on Task Level variable
+- name: Demo on vars file level variable
+  hosts: all
+  vars_file:
+    - exvars.yml
+  tasks:
+    - name: print URL
+      ansible.builtin.debug:
+        msg: URL - {{ URL }}
+
+- name: Demo on Task Level variable
   hosts: all
   tasks:
     - name: print URL
@@ -20,3 +29,6 @@
         msg: URL - {{ URL }}
   vars:
     URL: task.example.com
+
+# vars_files does not support task level, it is for play level only
+
