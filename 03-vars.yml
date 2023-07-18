@@ -34,7 +34,7 @@
 
 # Only that task have that variable, other tasks cannot access it.
 
-- name: variable from role
+- name: Variable from Roles
   hosts: all
   vars:
     URL_PLAY: play.example.com
