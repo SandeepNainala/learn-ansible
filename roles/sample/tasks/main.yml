@@ -4,7 +4,7 @@
 
 - name: Print Variable from Role
   ansible.builtin.debug:
-    msg: "URL - {{ URL }}"
+    msg: URL - {{ URL }}
 
 - name: Print Variable from Play
   ansible.builtin.debug:
