@@ -1,0 +1,6 @@
+- name: parameters
+  hosts: local
+  tasks:
+    - name: print a parameter
+      anisble.builtin.debug:
+        msg: - {{ lookup ('aws_ssm', 'test.test' region='us-east-1' ) }}
