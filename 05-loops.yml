@@ -1,13 +1,13 @@
 - name: Demo on Loops
   hosts: localhost
-  conection: local
+  connection: local
   tasks:
-    -name: Demo on Loops
-     ansible.builtin.debug:
-       msg: Fruit Name - {{ item }}
-     loop:
-      - apple
-      - banana
-      - orange
+    - name: Demo task for loop
+      ansible.builtin.debug:
+        msg: Fruit Name - {{ item }}
+      loop:
+        - apple
+        - banana
+        - orange
 
 
